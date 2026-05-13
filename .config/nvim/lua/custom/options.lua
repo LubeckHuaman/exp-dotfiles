@@ -2,6 +2,14 @@ vim.o.number = true
 vim.o.mouse = 'a'
 vim.o.showmode = false
 
+-- Homebrew binaries (Apple Silicon / Intel)
+vim.env.PATH = vim.fn.stdpath 'data' .. '/mason/bin:' .. vim.env.PATH
+if vim.fn.isdirectory '/opt/homebrew/bin' == 1 then
+  vim.env.PATH = '/opt/homebrew/bin:' .. vim.env.PATH
+elseif vim.fn.isdirectory '/usr/local/bin' == 1 then
+  vim.env.PATH = '/usr/local/bin:' .. vim.env.PATH
+end
+
 vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
