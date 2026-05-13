@@ -108,11 +108,14 @@ Automatically detects project type and runs:
 ### LSP Navigation
 | Shortcut | Action |
 |----------|--------|
-| `grd` | Go to definition |
-| `grr` | Go to references |
-| `gri` | Go to implementation |
-| `grn` | Rename symbol |
-| `gra` | Code action (quick fix) |
+| `gd` | Go to definition |
+| `gD` | Go to declaration |
+| `gr` | Go to references |
+| `gi` | Go to implementation |
+| `K` | Hover documentation |
+| `<C-k>` | Signature help |
+| `<leader>ca` | Code action (quick fix) |
+| `<leader>rn` | Rename symbol |
 | `<leader>th` | Toggle inlay hints |
 
 ### Agentic.nvim (AI Chat with OpenCode)
@@ -192,6 +195,14 @@ Automatically detects project type and runs:
 - **Requires Java 21+** to run `jdtls` (the Java LSP server)
 - Use SDKMAN: `sdk install java 21.0.1-tem && sdk default java 21.0.1-tem`
 - Your project can compile with Java 17, but the server needs 21+
+
+### Go
+- **Requires Go 1.23+** for Delve debugger compatibility
+- Install via Homebrew: `brew install go`
+- **gopls**: installed automatically by Mason (Go LSP server)
+- **gofumpt**: installed automatically by Mason (formatter)
+- **delve**: installed automatically by Mason (debugger), or manually: `go install github.com/go-delve/delve/cmd/dlv@latest`
+- Make sure `~/go/bin` is in your `PATH` for manually installed tools
 
 ### Tools Installed via Mason
 When opening Neovim for the first time, Mason will automatically install:
