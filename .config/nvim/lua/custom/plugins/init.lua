@@ -614,6 +614,8 @@ return {
   },
 
   require 'kickstart.plugins.neo-tree',
-
-  { import = 'custom.plugins' },
 }
+
+-- The { import = 'custom.plugins' } is NOT needed here
+-- lazy.nvim automatically loads ALL files in lua/custom/plugins/*.lua
+-- This includes: init.lua (this file), leetcode.lua, etc.
