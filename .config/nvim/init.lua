@@ -42,10 +42,6 @@ require('lazy').setup('custom.plugins', {
 vim.api.nvim_create_autocmd('User', {
   pattern = 'VeryLazy',
   callback = function()
-    -- Only download pre-compiled parsers, don't try to compile
-    require('nvim-treesitter.install').compilers = {}
-    require('nvim-treesitter.install').prefer_git = false
-
     local ok, ts = pcall(require, 'nvim-treesitter.configs')
     if ok then
       ts.setup {
