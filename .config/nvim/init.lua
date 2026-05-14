@@ -2,8 +2,8 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = false
 
-require('custom.options')
-require('custom.keymaps')
+require 'custom.options'
+require 'custom.keymaps'
 
 -- Install lazy.nvim
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -38,21 +38,9 @@ require('lazy').setup('custom.plugins', {
   },
 })
 
--- Treesitter setup (after lazy loads everything)
-vim.api.nvim_create_autocmd('User', {
-  pattern = 'VeryLazy',
-  callback = function()
-    local ok, ts = pcall(require, 'nvim-treesitter.configs')
-    if ok then
-      ts.setup {
-        ensure_installed = { 'bash', 'c', 'cpp', 'diff', 'go', 'html', 'java', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'python', 'query', 'typescript', 'vim', 'vimdoc' },
-        auto_install = true,
-        highlight = {
-          enable = true,
-          additional_vim_regex_highlighting = { 'ruby' },
-        },
-        indent = { enable = true, disable = { 'ruby' } },
-      }
-    end
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'go', 'lua', 'python', 'bash', 'c', 'cpp', 'vim' },
+  callback = function(args)
+    pcall(vim.treesitter.start, args.buf)
   end,
 })

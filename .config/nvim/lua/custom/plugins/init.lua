@@ -268,7 +268,7 @@ return {
       'saghen/blink.cmp',
     },
     config = function()
-      require('custom.lsp')
+      require 'custom.lsp'
     end,
   },
 
@@ -487,8 +487,24 @@ return {
 
   {
     'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-    event = 'VeryLazy',
+    opts = {
+      ensure_installed = {
+        'go',
+        'bash',
+        'python',
+        'cpp',
+        'c',
+        'vim',
+      },
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      },
+      indent = { enable = true },
+    },
+    config = function(_, opts)
+      require('nvim-treesitter.configs').setup(opts)
+    end,
   },
 
   {
@@ -600,7 +616,7 @@ return {
       'nvim-neotest/nvim-nio',
     },
     config = function()
-      require('custom.dap')
+      require 'custom.dap'
     end,
   },
 
