@@ -7,7 +7,7 @@ return {
     opts = {
       -- Optional: Add any specific configuration options for leetcode.nvim
       -- e.g., { coderunner = "nvim-treesitter-textobjects", debug = true }
-      lang = 'python3',
+      lang = 'java',
       description = {
         position = 'left', ---@type lc.position
         width = '40%', ---@type lc.size

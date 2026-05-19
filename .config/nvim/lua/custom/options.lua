@@ -51,7 +51,7 @@ vim.api.nvim_create_autocmd('FileType', {
 
 vim.api.nvim_create_autocmd('FileType', {
   group = vim.api.nvim_create_augroup('custom-indent', { clear = false }),
-  pattern = { 'c', 'cpp', 'java' },
+  pattern = { 'c', 'cpp' },
   callback = function()
     vim.bo.expandtab = true
     vim.bo.tabstop = 2
