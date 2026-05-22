@@ -127,11 +127,39 @@ return {
 
       vim.keymap.set('n', '+', '<C-a>', { desc = 'Increment under cursor', noremap = true })
       vim.keymap.set('n', '-', '<C-x>', { desc = 'Decrement under cursor', noremap = true })
-    end,
-  },
+     end,
+   },
 
-  {
-    'lewis6991/gitsigns.nvim',
+    {
+      'AlexvZyl/nordic.nvim',
+      lazy = false,
+      priority = 1000,
+      config = function()
+        require('nordic').load()
+      end,
+    },
+
+    {
+      'shaunsingh/nord.nvim',
+      lazy = false,
+      priority = 1000,
+      -- config = function()
+      --   -- Optional configuration
+      --   vim.g.nord_contrast = true
+      --   vim.g.nord_borders = false
+      --   vim.g.nord_disable_background = false
+      --   vim.g.nord_italic = false
+      --   vim.g.nord_uniform_diff_background = true
+      --   vim.g.nord_bold = false
+      --   
+      --   -- Load the colorscheme
+      --   require('nord').set()
+      --   -- Alternatively: vim.cmd.colorscheme 'nord'
+      -- end,
+    },
+
+   {
+     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
         add = { text = '+' },
@@ -352,16 +380,79 @@ return {
     },
   },
 
+  -- {
+  --   'scottmckendry/cyberdream.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('cyberdream').setup {
+  --       -- Enable transparent background
+  --       transparent = true,
+  --       saturation = 0.4,
+  --
+  --       -- Enable italics comments
+  --       italic_comments = true,
+  --
+  --       -- Replace all fillchars with ' '
+  --       hide_fillchars = false,
+  --
+  --       -- Modern borderless telescope theme
+  --       borderless_telescope = true,
+  --
+  --       -- Set terminal colors used in `:terminal`
+  --       terminal_colors = true,
+  --
+  --       -- Use caching to improve performance - WARNING: experimental feature - expect the unexpected!
+  --       -- Improves performance but may cause issues
+  --       cache = false,
+  --
+  --       -- Theme comes in three variants: 'default', 'vibrant', and 'highcontrast'
+  --       variant = 'default', -- or 'vibrant', 'highcontrast'
+  --
+  --       -- Highlight groups
+  --       highlights = {
+  --         -- Highlight groups to override, adding to existing groups
+  --         -- See `:h highlight-groups` for a list of highlight groups
+  --         -- Example:
+  --         -- Comment = { fg = '#696969', bg = 'NONE', italic = true },
+  --
+  --         -- Override completely a highlight group; setting to `false` will disable that highlight
+  --         -- Example:
+  --         -- StatusLine = false,
+  --       },
+  --
+  --       -- Override a color entirely
+  --       colors = {
+  --         -- For a list of colors see `lua/cyberdream/theme.lua`
+  --         -- Example:
+  --         -- bg = '#000000',
+  --         -- green = '#00ff00',
+  --         -- magenta = '#ff00ff',
+  --       },
+  --
+  --       -- Disable or enable colorscheme extensions
+  --       extensions = {
+  --         telescope = true,
+  --         notify = true,
+  --         mini = true,
+  --         -- ...
+  --       },
+  --     }
+  --
+  --     vim.cmd 'colorscheme cyberdream'
+  --   end,
+  -- },
+
   {
     'ellisonleao/gruvbox.nvim',
     priority = 1000,
-    config = function()
-      require('gruvbox').setup {
-        contrast = 'soft',
-        terminal_colors = true,
-      }
-      vim.cmd.colorscheme 'gruvbox'
-    end,
+    -- config = function()
+    --   require('gruvbox').setup {
+    --     contrast = 'soft',
+    --     terminal_colors = true,
+    --   }
+    --   vim.cmd.colorscheme 'gruvbox'
+    -- end,
   },
 
   {
