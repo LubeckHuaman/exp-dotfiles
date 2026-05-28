@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
     map('K', vim.lsp.buf.hover, 'Hover Documentation')
     map('<C-k>', vim.lsp.buf.signature_help, 'Signature Help')
-    map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
+    map('<leader>cA', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
     map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
 
     local function client_supports_method(client, method, bufnr)

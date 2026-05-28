@@ -127,39 +127,39 @@ return {
 
       vim.keymap.set('n', '+', '<C-a>', { desc = 'Increment under cursor', noremap = true })
       vim.keymap.set('n', '-', '<C-x>', { desc = 'Decrement under cursor', noremap = true })
-     end,
-   },
+    end,
+  },
 
-    {
-      'AlexvZyl/nordic.nvim',
-      lazy = false,
-      priority = 1000,
-      config = function()
-        require('nordic').load()
-      end,
-    },
+  -- {
+  --   'AlexvZyl/nordic.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('nordic').load()
+  --   end,
+  -- },
 
-    {
-      'shaunsingh/nord.nvim',
-      lazy = false,
-      priority = 1000,
-      -- config = function()
-      --   -- Optional configuration
-      --   vim.g.nord_contrast = true
-      --   vim.g.nord_borders = false
-      --   vim.g.nord_disable_background = false
-      --   vim.g.nord_italic = false
-      --   vim.g.nord_uniform_diff_background = true
-      --   vim.g.nord_bold = false
-      --   
-      --   -- Load the colorscheme
-      --   require('nord').set()
-      --   -- Alternatively: vim.cmd.colorscheme 'nord'
-      -- end,
-    },
+  -- {
+  --   'shaunsingh/nord.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   -- config = function()
+  --   --   -- Optional configuration
+  --   --   vim.g.nord_contrast = true
+  --   --   vim.g.nord_borders = false
+  --   --   vim.g.nord_disable_background = false
+  --   --   vim.g.nord_italic = false
+  --   --   vim.g.nord_uniform_diff_background = true
+  --   --   vim.g.nord_bold = false
+  --   --
+  --   --   -- Load the colorscheme
+  --   --   require('nord').set()
+  --   --   -- Alternatively: vim.cmd.colorscheme 'nord'
+  --   -- end,
+  -- },
 
-   {
-     'lewis6991/gitsigns.nvim',
+  {
+    'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
         add = { text = '+' },
@@ -388,7 +388,7 @@ return {
   --     require('cyberdream').setup {
   --       -- Enable transparent background
   --       transparent = true,
-  --       saturation = 0.4,
+  --       -- saturation = 1,
   --
   --       -- Enable italics comments
   --       italic_comments = true,
@@ -443,26 +443,64 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'ellisonleao/gruvbox.nvim',
+  --   priority = 1000,
+  --   -- config = function()
+  --   --   require('gruvbox').setup {
+  --   --     contrast = 'soft',
+  --   --     terminal_colors = true,
+  --   --   }
+  --   --   vim.cmd.colorscheme 'gruvbox'
+  --   -- end,
+  -- },
+
   {
-    'ellisonleao/gruvbox.nvim',
+    'sainnhe/everforest',
+    lazy = false,
     priority = 1000,
-    -- config = function()
-    --   require('gruvbox').setup {
-    --     contrast = 'soft',
-    --     terminal_colors = true,
-    --   }
-    --   vim.cmd.colorscheme 'gruvbox'
-    -- end,
+    config = function()
+      vim.g.everforest_background = 'soft'
+      vim.g.everforest_better_performance = 1
+      vim.cmd.colorscheme 'everforest'
+      vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+      vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
+      vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+    end,
   },
+
+  -- {
+  --   'junegunn/seoul256.vim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.g.seoul256_background = 239
+  --     vim.cmd.colorscheme 'seoul256'
+  --   end,
+  -- },
+
+  -- {
+  --   'catppuccin/nvim',
+  --   name = 'catppuccin',
+  --   priority = 1000,
+  --   config = function()
+  --     require('catppuccin').setup {
+  --       flavour = 'latte',
+  --       transparent_background = false,
+  --     }
+  --     vim.cmd.colorscheme 'catppuccin'
+  --   end,
+  -- },
 
   {
     'carlos-algms/agentic.nvim',
     opts = {
       provider = 'opencode-acp',
       windows = {
-        position = 'right',
-        width = '40%',
+        position = 'bottom',
+        height = '30%',
       },
+      transparent_background = true,
       diff_preview = {
         enabled = true,
         layout = 'inline',
@@ -528,6 +566,12 @@ return {
       display = {
         chat = {
           show_header_separator = true,
+          window = {
+            layout = 'float',
+            border = 'rounded',
+            height = 0.8,
+            width = 0.5,
+          },
         },
         diff = {
           provider = 'diffchar',
@@ -715,6 +759,83 @@ return {
   },
 
   require 'kickstart.plugins.neo-tree',
+
+  {
+    'yetone/avante.nvim',
+    event = 'VeryLazy',
+    lazy = false,
+    version = false,
+    opts = {
+      mode = 'agentic',
+      provider = 'opencode',
+      acp_providers = {
+        ['opencode'] = {
+          command = 'opencode',
+          args = { 'acp' },
+        },
+      },
+      input = {
+        provider = 'native',
+      },
+      behaviour = {
+        auto_add_current_file = true,
+        auto_apply_diff_after_generation = true,
+        auto_focus_on_diff_view = false,
+        acp_follow_agent_locations = true,
+      },
+      windows = {
+        position = 'right',
+        width = 0.4,
+      },
+    },
+    build = 'make',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'MunifTanjim/nui.nvim',
+    },
+    keys = {
+      {
+        '<leader>av',
+        function()
+          require('avante.api').ask()
+        end,
+        mode = { 'n', 'v' },
+        desc = 'Avante Ask',
+      },
+      {
+        '<leader>ae',
+        function()
+          require('avante.api').edit()
+        end,
+        mode = { 'n', 'v' },
+        desc = 'Avante Edit',
+      },
+      {
+        '<leader>as',
+        function()
+          require('avante.api').stop()
+        end,
+        mode = { 'n', 'i' },
+        desc = 'Avante Stop',
+      },
+      {
+        '<leader>aM',
+        function()
+          require('avante.api').select_acp_model()
+        end,
+        mode = { 'n' },
+        desc = 'Avante ACP Model',
+      },
+      {
+        '<leader>am',
+        function()
+          require('avante.api').select_acp_mode()
+        end,
+        mode = { 'n' },
+        desc = 'Avante ACP Mode',
+      },
+    },
+  },
 }
 
 -- The { import = 'custom.plugins' } is NOT needed here

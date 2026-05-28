@@ -59,3 +59,11 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.bo.softtabstop = 2
   end,
 })
+
+-- Recargar buffers cuando agentes externos (opencode) escriben archivos
+vim.api.nvim_create_autocmd('BufEnter', {
+  group = vim.api.nvim_create_augroup('auto-checktime', { clear = true }),
+  callback = function()
+    vim.cmd('checktime')
+  end,
+})
