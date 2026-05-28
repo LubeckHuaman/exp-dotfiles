@@ -1,5 +1,5 @@
-active_color=0xff87afaf
-inactive_color=0xff4e4e43
+active_color=0xff7fffd4
+inactive_color=0xff7fffd4
 width=6.0
 style=round
-whitelist="Alacritty"
+whitelist=Alacritty
