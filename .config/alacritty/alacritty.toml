@@ -1,0 +1,43 @@
+# alacritty.toml
+
+[window]
+opacity = 0.85
+blur = true
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+size = 12
+
+[keyboard]
+bindings = [
+  { key = "T", mods = "Command", chars = "\u001bt" },
+  { key = "Left", mods = "Command", chars = "\u001b\u001b[D" },
+  { key = "Right", mods = "Command", chars = "\u001b\u001b[C" },
+  { key = "T", mods = "Command|Shift", chars = "\u001bT" },
+]
+
+[colors]
+primary = { background = "#30302c", foreground = "#e8e8d3" }
+
+[colors.normal]
+black   = "#151513"
+red     = "#d68787"
+green   = "#87af87"
+yellow  = "#d8af5f"
+blue    = "#87afaf"
+magenta = "#df5f87"
+cyan    = "#87d7d7"
+white   = "#808070"
+
+[colors.bright]
+black   = "#4e4e43"
+red     = "#d68787"
+green   = "#87af87"
+yellow  = "#d8af5f"
+blue    = "#87afaf"
+magenta = "#df5f87"
+cyan    = "#87d7d7"
+white   = "#e8e8d3"
