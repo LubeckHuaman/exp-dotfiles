@@ -479,16 +479,26 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'catppuccin/nvim',
+  --   name = 'catppuccin',
+  --   priority = 1000,
+  --   config = function()
+  --     require('catppuccin').setup {
+  --       flavour = 'mocha',
+  --       transparent_background = true,
+  --     }
+  --     vim.cmd.colorscheme 'catppuccin'
+  --   end,
+  -- },
+
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    'craftzdog/solarized-osaka.nvim',
+    lazy = false,
     priority = 1000,
+    opts = {},
     config = function()
-      require('catppuccin').setup {
-        flavour = 'mocha',
-        transparent_background = true,
-      }
-      vim.cmd.colorscheme 'catppuccin'
+      vim.cmd.colorscheme 'solarized-osaka'
     end,
   },
 
