@@ -455,19 +455,19 @@ return {
   --   -- end,
   -- },
 
-  {
-    'sainnhe/everforest',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.g.everforest_background = 'soft'
-      vim.g.everforest_better_performance = 1
-      vim.cmd.colorscheme 'everforest'
-      vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-      vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
-      vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-    end,
-  },
+  -- {
+  --   'sainnhe/everforest',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.g.everforest_background = 'soft'
+  --     vim.g.everforest_better_performance = 1
+  --     vim.cmd.colorscheme 'everforest'
+  --     vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+  --     vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
+  --     vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+  --   end,
+  -- },
 
   -- {
   --   'junegunn/seoul256.vim',
@@ -479,18 +479,18 @@ return {
   --   end,
   -- },
 
-  -- {
-  --   'catppuccin/nvim',
-  --   name = 'catppuccin',
-  --   priority = 1000,
-  --   config = function()
-  --     require('catppuccin').setup {
-  --       flavour = 'latte',
-  --       transparent_background = false,
-  --     }
-  --     vim.cmd.colorscheme 'catppuccin'
-  --   end,
-  -- },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    config = function()
+      require('catppuccin').setup {
+        flavour = 'latte',
+        transparent_background = false,
+      }
+      vim.cmd.colorscheme 'catppuccin'
+    end,
+  },
 
   {
     'carlos-algms/agentic.nvim',
