@@ -455,18 +455,18 @@ return {
   --   end,
   -- },
 
-  {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require('rose-pine').setup {
-        variant = 'moon',
-      }
-      vim.cmd.colorscheme 'rose-pine'
-    end,
-  },
+  -- {
+  --   'rose-pine/neovim',
+  --   name = 'rose-pine',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('rose-pine').setup {
+  --       variant = 'moon',
+  --     }
+  --     vim.cmd.colorscheme 'rose-pine'
+  --   end,
+  -- },
 
   -- {
   --   'sainnhe/everforest',
@@ -492,18 +492,18 @@ return {
   --   end,
   -- },
 
-  -- {
-  --   'catppuccin/nvim',
-  --   name = 'catppuccin',
-  --   priority = 1000,
-  --   config = function()
-  --     require('catppuccin').setup {
-  --       flavour = 'mocha',
-  --       transparent_background = false,
-  --     }
-  --     vim.cmd.colorscheme 'catppuccin'
-  --   end,
-  -- },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    config = function()
+      require('catppuccin').setup {
+        flavour = 'mocha',
+        transparent_background = false,
+      }
+      vim.cmd.colorscheme 'catppuccin'
+    end,
+  },
 
   -- {
   --   'craftzdog/solarized-osaka.nvim',
@@ -544,26 +544,29 @@ return {
   -- },
 
   -- {
-  --   'folke/tokyonight.nvim',
-  --   lazy = false,
+  --   'ellisonleao/gruvbox.nvim',
   --   priority = 1000,
-  --   opts = {
-  --     style = 'moon',
-  --     transparent = true,
-  --   },
   --   config = function()
-  --     vim.cmd.colorscheme 'tokyonight'
+  --     require('gruvbox').setup {
+  --       contrast = 'hard',
+  --       terminal_colors = true,
+  --     }
+  --     vim.cmd.colorscheme 'gruvbox'
   --   end,
   -- },
 
-  {
-    'carlos-algms/agentic.nvim',
-    opts = {
-      provider = 'opencode-acp',
-      windows = {
-        position = 'bottom',
-        height = '30%',
-      },
+  -- {
+  --   'rose-pine/neovim',
+  --   name = 'rose-pine',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('rose-pine').setup {
+  --       variant = 'moon',
+  --     }
+  --     vim.cmd.colorscheme 'rose-pine'
+  --   end,
+  -- },
       transparent_background = true,
       diff_preview = {
         enabled = true,
