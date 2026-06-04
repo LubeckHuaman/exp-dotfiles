@@ -1,6 +1,7 @@
 vim.o.number = true
 vim.o.mouse = 'a'
 vim.o.showmode = false
+vim.o.showcmd = false
 
 -- Homebrew binaries (Apple Silicon / Intel)
 vim.env.PATH = vim.fn.stdpath 'data' .. '/mason/bin:' .. vim.env.PATH
