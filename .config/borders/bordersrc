@@ -3,3 +3,4 @@ inactive_color=0xff7fffd4
 width=6.0
 style=round
 whitelist=Alacritty
+ax_focus=on
