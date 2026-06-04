@@ -567,6 +567,15 @@ return {
   --     vim.cmd.colorscheme 'rose-pine'
   --   end,
   -- },
+
+  {
+    'carlos-algms/agentic.nvim',
+    opts = {
+      provider = 'opencode-acp',
+      windows = {
+        position = 'bottom',
+        height = '30%',
+      },
       transparent_background = true,
       diff_preview = {
         enabled = true,
