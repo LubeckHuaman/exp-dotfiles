@@ -492,13 +492,26 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'craftzdog/solarized-osaka.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'solarized-osaka'
+  --   end,
+  -- },
+
   {
-    'craftzdog/solarized-osaka.nvim',
+    'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
-    opts = {},
+    opts = {
+      style = 'moon',
+      transparent = true,
+    },
     config = function()
-      vim.cmd.colorscheme 'solarized-osaka'
+      vim.cmd.colorscheme 'tokyonight'
     end,
   },
 
