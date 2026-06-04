@@ -492,18 +492,18 @@ return {
   --   end,
   -- },
 
-  {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
-    config = function()
-      require('catppuccin').setup {
-        flavour = 'mocha',
-        transparent_background = false,
-      }
-      vim.cmd.colorscheme 'catppuccin'
-    end,
-  },
+  -- {
+  --   'catppuccin/nvim',
+  --   name = 'catppuccin',
+  --   priority = 1000,
+  --   config = function()
+  --     require('catppuccin').setup {
+  --       flavour = 'mocha',
+  --       transparent_background = false,
+  --     }
+  --     vim.cmd.colorscheme 'catppuccin'
+  --   end,
+  -- },
 
   -- {
   --   'craftzdog/solarized-osaka.nvim',
@@ -555,18 +555,18 @@ return {
   --   end,
   -- },
 
-  -- {
-  --   'rose-pine/neovim',
-  --   name = 'rose-pine',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('rose-pine').setup {
-  --       variant = 'moon',
-  --     }
-  --     vim.cmd.colorscheme 'rose-pine'
-  --   end,
-  -- },
+  {
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('rose-pine').setup {
+        variant = 'moon',
+      }
+      vim.cmd.colorscheme 'rose-pine'
+    end,
+  },
 
   {
     'carlos-algms/agentic.nvim',
