@@ -118,7 +118,12 @@ require('mason-lspconfig').setup {
   automatic_installation = false,
   handlers = {
     function(server_name)
-      if server_name == 'jdtls' then return end
+      if server_name == 'jdtls' then
+        local server = servers[server_name] or {}
+        server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+        require('lspconfig')[server_name].setup(server)
+        return
+      end
       local server = servers[server_name] or {}
       server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
       require('lspconfig')[server_name].setup(server)

@@ -709,6 +709,7 @@ return {
         'cpp',
         'c',
         'vim',
+        'java',
       },
       highlight = {
         enable = true,
