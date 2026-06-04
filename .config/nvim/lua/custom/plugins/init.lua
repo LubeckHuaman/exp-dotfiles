@@ -443,15 +443,28 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'ellisonleao/gruvbox.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     require('gruvbox').setup {
+  --       contrast = 'hard',
+  --       terminal_colors = true,
+  --     }
+  --     vim.cmd.colorscheme 'gruvbox'
+  --   end,
+  -- },
+
   {
-    'ellisonleao/gruvbox.nvim',
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    lazy = false,
     priority = 1000,
     config = function()
-      require('gruvbox').setup {
-        contrast = 'hard',
-        terminal_colors = true,
+      require('rose-pine').setup {
+        variant = 'moon',
       }
-      vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'rose-pine'
     end,
   },
 
