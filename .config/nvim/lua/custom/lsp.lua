@@ -55,6 +55,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- Silenciar mensajes de progreso del LSP (Publish diagnostics, Validate documents)
+vim.lsp.handlers['$/progress'] = function() end
+
 vim.diagnostic.config {
   severity_sort = true,
   float = { border = 'rounded', source = 'if_many' },
@@ -113,6 +116,7 @@ require('mason-lspconfig').setup {
   automatic_installation = false,
   handlers = {
     function(server_name)
+      if server_name == 'jdtls' then return end
       local server = servers[server_name] or {}
       server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
       require('lspconfig')[server_name].setup(server)
