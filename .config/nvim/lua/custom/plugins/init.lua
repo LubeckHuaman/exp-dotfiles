@@ -443,17 +443,17 @@ return {
   --   end,
   -- },
 
-  -- {
-  --   'ellisonleao/gruvbox.nvim',
-  --   priority = 1000,
-  --   -- config = function()
-  --   --   require('gruvbox').setup {
-  --   --     contrast = 'soft',
-  --   --     terminal_colors = true,
-  --   --   }
-  --   --   vim.cmd.colorscheme 'gruvbox'
-  --   -- end,
-  -- },
+  {
+    'ellisonleao/gruvbox.nvim',
+    priority = 1000,
+    config = function()
+      require('gruvbox').setup {
+        contrast = 'hard',
+        terminal_colors = true,
+      }
+      vim.cmd.colorscheme 'gruvbox'
+    end,
+  },
 
   -- {
   --   'sainnhe/everforest',
@@ -516,19 +516,19 @@ return {
   --   end,
   -- },
 
-  {
-    'rebelot/kanagawa.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require('kanagawa').setup({
-        compile = true,
-        theme = 'wave',
-        transparent = false,
-      })
-      vim.cmd.colorscheme 'kanagawa'
-    end,
-  },
+  -- {
+  --   'rebelot/kanagawa.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('kanagawa').setup({
+  --       compile = true,
+  --       theme = 'wave',
+  --       transparent = false,
+  --     })
+  --     vim.cmd.colorscheme 'kanagawa'
+  --   end,
+  -- },
 
   -- {
   --   'folke/tokyonight.nvim',
