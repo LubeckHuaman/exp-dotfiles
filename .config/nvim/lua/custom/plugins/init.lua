@@ -479,18 +479,18 @@ return {
   --   end,
   -- },
 
-  -- {
-  --   'catppuccin/nvim',
-  --   name = 'catppuccin',
-  --   priority = 1000,
-  --   config = function()
-  --     require('catppuccin').setup {
-  --       flavour = 'mocha',
-  --       transparent_background = true,
-  --     }
-  --     vim.cmd.colorscheme 'catppuccin'
-  --   end,
-  -- },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    config = function()
+      require('catppuccin').setup {
+        flavour = 'latte',
+        transparent_background = true,
+      }
+      vim.cmd.colorscheme 'catppuccin'
+    end,
+  },
 
   -- {
   --   'craftzdog/solarized-osaka.nvim',
@@ -502,18 +502,18 @@ return {
   --   end,
   -- },
 
-  {
-    'folke/tokyonight.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {
-      style = 'moon',
-      transparent = true,
-    },
-    config = function()
-      vim.cmd.colorscheme 'tokyonight'
-    end,
-  },
+  -- {
+  --   'folke/tokyonight.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     style = 'moon',
+  --     transparent = true,
+  --   },
+  --   config = function()
+  --     vim.cmd.colorscheme 'tokyonight'
+  --   end,
+  -- },
 
   {
     'carlos-algms/agentic.nvim',
