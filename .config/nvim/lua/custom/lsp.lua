@@ -4,11 +4,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local client = vim.lsp.get_client_by_id(event.data.client_id)
     if not client then return end
 
-    -- Desactivar semantic tokens en Java (causa lag al escribir)
-    if client.name == 'jdtls' then
-      client.server_capabilities.semanticTokensProvider = nil
-    end
-
     local map = function(keys, func, desc, mode)
       mode = mode or 'n'
       vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
