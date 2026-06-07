@@ -573,8 +573,8 @@ return {
     opts = {
       provider = 'opencode-acp',
       windows = {
-        position = 'bottom',
-        height = '30%',
+        position = 'right',
+        width = '45%',
       },
       transparent_background = true,
       diff_preview = {
