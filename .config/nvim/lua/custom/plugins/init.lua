@@ -570,25 +570,6 @@ return {
 
   {
     'carlos-algms/agentic.nvim',
-    opts = {
-      provider = 'opencode-acp',
-      windows = {
-        position = 'right',
-        width = '45%',
-      },
-      transparent_background = true,
-      diff_preview = {
-        enabled = true,
-        layout = 'inline',
-        center_on_navigate_hunks = true,
-      },
-      folding = {
-        tool_calls = {
-          enabled = true,
-          threshold = 10,
-        },
-      },
-    },
     keys = {
       {
         '<leader>aa',
@@ -837,82 +818,82 @@ return {
 
   require 'kickstart.plugins.neo-tree',
 
-  {
-    'yetone/avante.nvim',
-    event = 'VeryLazy',
-    lazy = false,
-    version = false,
-    opts = {
-      mode = 'agentic',
-      provider = 'opencode',
-      acp_providers = {
-        ['opencode'] = {
-          command = 'opencode',
-          args = { 'acp' },
-        },
-      },
-      input = {
-        provider = 'native',
-      },
-      behaviour = {
-        auto_add_current_file = true,
-        auto_apply_diff_after_generation = true,
-        auto_focus_on_diff_view = false,
-        acp_follow_agent_locations = true,
-      },
-      windows = {
-        position = 'right',
-        width = 0.4,
-      },
-    },
-    build = 'make',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'MunifTanjim/nui.nvim',
-    },
-    keys = {
-      {
-        '<leader>Av',
-        function()
-          require('avante.api').ask()
-        end,
-        mode = { 'n', 'v' },
-        desc = 'Avante Ask',
-      },
-      {
-        '<leader>Ae',
-        function()
-          require('avante.api').edit()
-        end,
-        mode = { 'n', 'v' },
-        desc = 'Avante Edit',
-      },
-      {
-        '<leader>As',
-        function()
-          require('avante.api').stop()
-        end,
-        mode = { 'n', 'i' },
-        desc = 'Avante Stop',
-      },
-      {
-        '<leader>AM',
-        function()
-          require('avante.api').select_acp_model()
-        end,
-        mode = { 'n' },
-        desc = 'Avante ACP Model',
-      },
-      {
-        '<leader>Am',
-        function()
-          require('avante.api').select_acp_mode()
-        end,
-        mode = { 'n' },
-        desc = 'Avante ACP Mode',
-      },
-    },
-  },
+  -- {
+  --   'yetone/avante.nvim',
+  --   event = 'VeryLazy',
+  --   lazy = false,
+  --   version = false,
+  --   opts = {
+  --     mode = 'agentic',
+  --     provider = 'opencode',
+  --     acp_providers = {
+  --       ['opencode'] = {
+  --         command = 'opencode',
+  --         args = { 'acp' },
+  --       },
+  --     },
+  --     input = {
+  --       provider = 'native',
+  --     },
+  --     behaviour = {
+  --       auto_add_current_file = true,
+  --       auto_apply_diff_after_generation = true,
+  --       auto_focus_on_diff_view = false,
+  --       acp_follow_agent_locations = true,
+  --     },
+  --     windows = {
+  --       position = 'right',
+  --       width = 0.4,
+  --     },
+  --   },
+  --   build = 'make',
+  --   dependencies = {
+  --     'nvim-lua/plenary.nvim',
+  --     'MunifTanjim/nui.nvim',
+  --   },
+  --   keys = {
+  --     {
+  --       '<leader>Av',
+  --       function()
+  --         require('avante.api').ask()
+  --       end,
+  --       mode = { 'n', 'v' },
+  --       desc = 'Avante Ask',
+  --     },
+  --     {
+  --       '<leader>Ae',
+  --       function()
+  --         require('avante.api').edit()
+  --       end,
+  --       mode = { 'n', 'v' },
+  --       desc = 'Avante Edit',
+  --     },
+  --     {
+  --       '<leader>As',
+  --       function()
+  --         require('avante.api').stop()
+  --       end,
+  --       mode = { 'n', 'i' },
+  --       desc = 'Avante Stop',
+  --     },
+  --     {
+  --       '<leader>AM',
+  --       function()
+  --         require('avante.api').select_acp_model()
+  --       end,
+  --       mode = { 'n' },
+  --       desc = 'Avante ACP Model',
+  --     },
+  --     {
+  --       '<leader>Am',
+  --       function()
+  --         require('avante.api').select_acp_mode()
+  --       end,
+  --       mode = { 'n' },
+  --       desc = 'Avante ACP Mode',
+  --     },
+  --   },
+  -- },
 }
 
 -- The { import = 'custom.plugins' } is NOT needed here
