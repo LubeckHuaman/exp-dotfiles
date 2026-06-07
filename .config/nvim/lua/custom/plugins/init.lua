@@ -872,7 +872,7 @@ return {
     },
     keys = {
       {
-        '<leader>av',
+        '<leader>Av',
         function()
           require('avante.api').ask()
         end,
@@ -880,7 +880,7 @@ return {
         desc = 'Avante Ask',
       },
       {
-        '<leader>ae',
+        '<leader>Ae',
         function()
           require('avante.api').edit()
         end,
@@ -888,7 +888,7 @@ return {
         desc = 'Avante Edit',
       },
       {
-        '<leader>as',
+        '<leader>As',
         function()
           require('avante.api').stop()
         end,
@@ -896,7 +896,7 @@ return {
         desc = 'Avante Stop',
       },
       {
-        '<leader>aM',
+        '<leader>AM',
         function()
           require('avante.api').select_acp_model()
         end,
@@ -904,7 +904,7 @@ return {
         desc = 'Avante ACP Model',
       },
       {
-        '<leader>am',
+        '<leader>Am',
         function()
           require('avante.api').select_acp_mode()
         end,
