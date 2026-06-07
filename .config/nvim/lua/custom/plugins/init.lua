@@ -570,6 +570,9 @@ return {
 
   {
     'carlos-algms/agentic.nvim',
+    opts = {
+      provider = 'opencode-acp',
+    },
     keys = {
       {
         '<leader>aa',
