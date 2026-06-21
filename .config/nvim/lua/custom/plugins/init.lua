@@ -445,12 +445,22 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'dracula/vim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'alucard'
+  --   end,
+  -- },
+
   {
-    'dracula/vim',
+    'oskarnurm/koda.nvim',
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'alucard'
+      require('koda').setup { transparent = true }
+      vim.cmd.colorscheme 'koda-glade'
     end,
   },
 
