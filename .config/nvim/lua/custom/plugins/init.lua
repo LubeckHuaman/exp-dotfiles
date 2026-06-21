@@ -477,39 +477,48 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'marko-cerovac/material.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('material').setup {
+  --       contrast = {
+  --         sidebars = true,
+  --         line_numbers = true,
+  --       },
+  --       styles = {
+  --         functions = { bold = true },
+  --       },
+  --       plugins = {
+  --         'dap',
+  --         'gitsigns',
+  --         'indent-blankline',
+  --         'neogit',
+  --         'nvim-tree',
+  --         'telescope',
+  --         'which-key',
+  --       },
+  --       high_visibility = {
+  --         lighter = false,
+  --         darker = false,
+  --       },
+  --       transparent = {
+  --         editor = true,
+  --         sidebars = true,
+  --         float = true,
+  --       },
+  --     }
+  --     vim.cmd.colorscheme 'material'
+  --   end,
+  -- },
+
   {
-    'marko-cerovac/material.nvim',
+    'nyoom-engineering/oxocarbon.nvim',
     lazy = false,
     priority = 1000,
     config = function()
-      require('material').setup {
-        contrast = {
-          sidebars = true,
-          line_numbers = true,
-        },
-        styles = {
-          functions = { bold = true },
-        },
-        plugins = {
-          'dap',
-          'gitsigns',
-          'indent-blankline',
-          'neogit',
-          'nvim-tree',
-          'telescope',
-          'which-key',
-        },
-        high_visibility = {
-          lighter = false,
-          darker = false,
-        },
-        transparent = {
-          editor = true,
-          sidebars = true,
-          float = true,
-        },
-      }
-      vim.cmd.colorscheme 'material'
+      vim.cmd.colorscheme 'oxocarbon'
     end,
   },
 
