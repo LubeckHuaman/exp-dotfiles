@@ -383,7 +383,6 @@ return {
         },
         livePreview = true,
       }
-      vim.cmd.colorscheme 'embark'
     end,
   },
 
