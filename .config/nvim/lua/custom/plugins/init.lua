@@ -382,41 +382,44 @@ return {
     },
   },
 
-  {
-    'scottmckendry/cyberdream.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require('cyberdream').setup {
-        transparent = true,
-        italic_comments = true,
-        hide_fillchars = false,
-        borderless_telescope = true,
-        terminal_colors = true,
-        cache = false,
-        variant = 'default',
-        highlights = {},
-        colors = {},
-        extensions = {
-          telescope = true,
-          notify = true,
-          mini = true,
-        },
-      }
-
-      vim.cmd 'colorscheme cyberdream'
-    end,
-  },
-
   -- {
-  --   'bluz71/vim-moonfly-colors',
-  --   name = 'moonfly',
+  --   'scottmckendry/cyberdream.nvim',
   --   lazy = false,
   --   priority = 1000,
   --   config = function()
-  --     vim.cmd.colorscheme 'moonfly'
+  --     require('cyberdream').setup {
+  --       transparent = true,
+  --       italic_comments = true,
+  --       hide_fillchars = false,
+  --       borderless_telescope = true,
+  --       terminal_colors = true,
+  --       cache = false,
+  --       variant = 'default',
+  --       highlights = {},
+  --       colors = {},
+  --       extensions = {
+  --         telescope = true,
+  --         notify = true,
+  --         mini = true,
+  --       },
+  --     }
+  --     vim.cmd 'colorscheme cyberdream'
   --   end,
   -- },
+
+  {
+    'EdenEast/nightfox.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('nightfox').setup({
+        options = {
+          transparent = true,
+        },
+      })
+      vim.cmd.colorscheme 'nordfox'
+    end,
+  },
 
   -- {
   --   'rose-pine/neovim',
