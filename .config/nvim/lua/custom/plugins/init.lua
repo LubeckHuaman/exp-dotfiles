@@ -410,6 +410,16 @@ return {
           { name = 'Koda Glade', colorscheme = 'koda-glade', before = [[ require('koda').setup { transparent = false } ]] },
           { name = 'Zenburn', colorscheme = 'zenburn', before = [[ vim.o.background = 'dark' ]] },
           { name = 'Zenburn Light', colorscheme = 'zenburn', before = [[ vim.o.background = 'light' ]] },
+          { name = 'Gruvbox Material', colorscheme = 'gruvbox-material', before = [[ vim.g.gruvbox_material_background = 'medium'; vim.g.gruvbox_material_palette = 'material'; vim.g.gruvbox_material_transparent_background = 1 ]] },
+          { name = 'Gruvbox Material Hard', colorscheme = 'gruvbox-material', before = [[ vim.g.gruvbox_material_background = 'hard'; vim.g.gruvbox_material_palette = 'material'; vim.g.gruvbox_material_transparent_background = 1 ]] },
+          { name = 'Gruvbox Material Soft', colorscheme = 'gruvbox-material', before = [[ vim.g.gruvbox_material_background = 'soft'; vim.g.gruvbox_material_palette = 'material'; vim.g.gruvbox_material_transparent_background = 1 ]] },
+          { name = 'Gruvbox Material (Mix)', colorscheme = 'gruvbox-material', before = [[ vim.g.gruvbox_material_background = 'medium'; vim.g.gruvbox_material_palette = 'mix'; vim.g.gruvbox_material_transparent_background = 1 ]] },
+          { name = 'Gruvbox Material (Original)', colorscheme = 'gruvbox-material', before = [[ vim.g.gruvbox_material_background = 'medium'; vim.g.gruvbox_material_palette = 'original'; vim.g.gruvbox_material_transparent_background = 1 ]] },
+          { name = 'Gruvbox Material Light', colorscheme = 'gruvbox-material', before = [[ vim.o.background = 'light'; vim.g.gruvbox_material_background = 'medium'; vim.g.gruvbox_material_palette = 'material'; vim.g.gruvbox_material_transparent_background = 0 ]] },
+          { name = 'Gruvbox Material Hard Light', colorscheme = 'gruvbox-material', before = [[ vim.o.background = 'light'; vim.g.gruvbox_material_background = 'hard'; vim.g.gruvbox_material_palette = 'material'; vim.g.gruvbox_material_transparent_background = 0 ]] },
+          { name = 'Gruvbox Material Soft Light', colorscheme = 'gruvbox-material', before = [[ vim.o.background = 'light'; vim.g.gruvbox_material_background = 'soft'; vim.g.gruvbox_material_palette = 'material'; vim.g.gruvbox_material_transparent_background = 0 ]] },
+          { name = 'Gruvbox Material Mix Light', colorscheme = 'gruvbox-material', before = [[ vim.o.background = 'light'; vim.g.gruvbox_material_background = 'medium'; vim.g.gruvbox_material_palette = 'mix'; vim.g.gruvbox_material_transparent_background = 0 ]] },
+          { name = 'Gruvbox Material Original Light', colorscheme = 'gruvbox-material', before = [[ vim.o.background = 'light'; vim.g.gruvbox_material_background = 'medium'; vim.g.gruvbox_material_palette = 'original'; vim.g.gruvbox_material_transparent_background = 0 ]] },
         },
         livePreview = true,
       }
@@ -438,6 +448,7 @@ return {
   { 'dracula/vim' },
   { 'oskarnurm/koda.nvim' },
   { 'jnurmine/Zenburn' },
+  { 'sainnhe/gruvbox-material' },
 
   {
     'carlos-algms/agentic.nvim',
