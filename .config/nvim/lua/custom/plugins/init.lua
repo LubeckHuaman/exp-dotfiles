@@ -380,6 +380,7 @@ return {
           { name = 'Solarized Osaka', colorscheme = 'solarized-osaka' },
           { name = 'Bluloco Dark', colorscheme = 'bluloco-dark', before = [[ require('bluloco').setup { style = 'dark', transparent = true } ]] },
           { name = 'Bluloco Light', colorscheme = 'bluloco-light', before = [[ require('bluloco').setup { style = 'light', transparent = true } ]] },
+          { name = 'Aquavium', colorscheme = 'Aquavium', before = [[ require('Aquavium').setup { transparent = true } ]] },
         },
         livePreview = true,
       }
@@ -398,6 +399,7 @@ return {
   { 'junegunn/seoul256.vim' },
   { 'craftzdog/solarized-osaka.nvim' },
   { 'uloco/bluloco.nvim', dependencies = { 'rktjmp/lush.nvim' } },
+  { 'T-b-t-nchos/Aquavium.nvim' },
 
   {
     'carlos-algms/agentic.nvim',
