@@ -572,6 +572,10 @@ return {
     'carlos-algms/agentic.nvim',
     opts = {
       provider = 'opencode-acp',
+      windows = {
+        position = 'right',
+        width = '30%',
+      },
     },
     keys = {
       {

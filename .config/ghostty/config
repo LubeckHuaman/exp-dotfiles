@@ -1,0 +1,31 @@
+# Ghostty config - replicated from Kitty/Alacritty
+
+# Font
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+
+# Transparency
+background-opacity = 0.80
+background-blur = 20
+
+# Window
+window-decoration = none
+macos-non-native-fullscreen = true
+
+# Theme
+theme = Catppuccin Mocha
+
+# Cursor
+cursor-style = block
+
+# Scrollback
+scrollback-limit = 10000
+
+# Custom shader - blackhole
+custom-shader = /Users/speedmaster/Concepts/exp-dotfiles/.config/ghostty/blackhole/blackhole.glsl
+custom-shader-animation = true
+
+# Keybindings - tmux tab navigation (same as Kitty/Alacritty)
+keybind = super+t=text:\x1bt
+keybind = super+left=text:\x1b\x1b[D
+keybind = super+right=text:\x1b\x1b[C
