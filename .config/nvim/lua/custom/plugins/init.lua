@@ -464,16 +464,52 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'olimorris/onedarkpro.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     require('onedarkpro').setup {
+  --       options = {
+  --         transparency = true,
+  --       },
+  --     }
+  --     vim.cmd.colorscheme 'onedark'
+  --   end,
+  -- },
+
   {
-    'olimorris/onedarkpro.nvim',
+    'marko-cerovac/material.nvim',
+    lazy = false,
     priority = 1000,
     config = function()
-      require('onedarkpro').setup {
-        options = {
-          transparency = true,
+      require('material').setup {
+        contrast = {
+          sidebars = true,
+          line_numbers = true,
+        },
+        styles = {
+          functions = { bold = true },
+        },
+        plugins = {
+          'dap',
+          'gitsigns',
+          'indent-blankline',
+          'neogit',
+          'nvim-tree',
+          'telescope',
+          'which-key',
+        },
+        high_visibility = {
+          lighter = false,
+          darker = false,
+        },
+        transparent = {
+          editor = true,
+          sidebars = true,
+          float = true,
         },
       }
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'material'
     end,
   },
 
