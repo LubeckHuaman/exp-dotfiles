@@ -130,33 +130,6 @@ return {
     end,
   },
 
-  -- {
-  --   'AlexvZyl/nordic.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('nordic').load()
-  --   end,
-  -- },
-
-  -- {
-  --   'shaunsingh/nord.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   -- config = function()
-  --   --   -- Optional configuration
-  --   --   vim.g.nord_contrast = true
-  --   --   vim.g.nord_borders = false
-  --   --   vim.g.nord_disable_background = false
-  --   --   vim.g.nord_italic = false
-  --   --   vim.g.nord_uniform_diff_background = true
-  --   --   vim.g.nord_bold = false
-  --   --
-  --   --   -- Load the colorscheme
-  --   --   require('nord').set()
-  --   --   -- Alternatively: vim.cmd.colorscheme 'nord'
-  --   -- end,
-  -- },
 
   {
     'lewis6991/gitsigns.nvim',
@@ -382,245 +355,47 @@ return {
     },
   },
 
-  -- {
-  --   'scottmckendry/cyberdream.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('cyberdream').setup {
-  --       transparent = true,
-  --       italic_comments = true,
-  --       hide_fillchars = false,
-  --       borderless_telescope = true,
-  --       terminal_colors = true,
-  --       cache = false,
-  --       variant = 'default',
-  --       highlights = {},
-  --       colors = {},
-  --       extensions = {
-  --         telescope = true,
-  --         notify = true,
-  --         mini = true,
-  --       },
-  --     }
-  --     vim.cmd 'colorscheme cyberdream'
-  --   end,
-  -- },
-
-  -- {
-  --   'EdenEast/nightfox.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('nightfox').setup({
-  --       options = {
-  --         transparent = true,
-  --       },
-  --     })
-  --     vim.cmd.colorscheme 'nordfox'
-  --   end,
-  -- },
-
-  -- {
-  --   'navarasu/onedark.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('onedark').setup {
-  --       style = 'darker',
-  --       transparent = true,
-  --     }
-  --     vim.cmd.colorscheme 'onedark'
-  --   end,
-  -- },
-
-  -- {
-  --   'rebelot/kanagawa.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('kanagawa').setup {
-  --       theme = 'dragon',
-  --       transparent = true,
-  --     }
-  --     vim.cmd.colorscheme 'kanagawa'
-  --   end,
-  -- },
-
-  -- {
-  --   'catppuccin/nvim',
-  --   name = 'catppuccin',
-  --   priority = 1000,
-  --   config = function()
-  --     require('catppuccin').setup {
-  --       flavour = 'macchiato',
-  --       transparent_background = true,
-  --     }
-  --     vim.cmd.colorscheme 'catppuccin'
-  --   end,
-  -- },
-
-  -- {
-  --   'EdenEast/nightfox.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('nightfox').setup({
-  --       options = {
-  --         transparent = true,
-  --       },
-  --     })
-  --     vim.cmd.colorscheme 'carbonfox'
-  --   end,
-  -- },
-
-  -- {
-  --   'scottmckendry/cyberdream.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('cyberdream').setup {
-  --       transparent = true,
-  --       italic_comments = true,
-  --       hide_fillchars = false,
-  --       borderless_telescope = true,
-  --       terminal_colors = true,
-  --       cache = false,
-  --       variant = 'highcontrast',
-  --       highlights = {},
-  --       colors = {},
-  --       extensions = {
-  --         telescope = true,
-  --         notify = true,
-  --         mini = true,
-  --       },
-  --     }
-  --     vim.cmd 'colorscheme cyberdream'
-  --   end,
-  -- },
-
-  -- {
-  --   'navarasu/onedark.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('onedark').setup {
-  --       style = 'darker',
-  --       transparent = true,
-  --     }
-  --     vim.cmd.colorscheme 'onedark'
-  --   end,
-  -- },
-
-  -- {
-  --   'folke/tokyonight.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {},
-  --   config = function()
-  --     require('tokyonight').setup {
-  --       style = 'storm',
-  --       transparent = true,
-  --     }
-  --     vim.cmd.colorscheme 'tokyonight'
-  --   end,
-  -- },
-
   {
-    'embark-theme/vim',
-    name = 'embark',
+    'zaldih/themery.nvim',
     lazy = false,
     priority = 1000,
     config = function()
+      require('themery').setup {
+        themes = {
+          { name = 'Cyberdream (default)', colorscheme = 'cyberdream', before = [[ require('cyberdream').setup { transparent = true, italic_comments = true, hide_fillchars = false, borderless_telescope = true, terminal_colors = true, cache = false, variant = 'default', highlights = {}, colors = {}, extensions = { telescope = true, notify = true, mini = true } } ]] },
+          { name = 'Cyberdream (highcontrast)', colorscheme = 'cyberdream', before = [[ require('cyberdream').setup { transparent = true, italic_comments = true, hide_fillchars = false, borderless_telescope = true, terminal_colors = true, cache = false, variant = 'highcontrast', highlights = {}, colors = {}, extensions = { telescope = true, notify = true, mini = true } } ]] },
+          { name = 'Nightfox (Nordfox)', colorscheme = 'nordfox', before = [[ require('nightfox').setup { options = { transparent = true } } ]] },
+          { name = 'Nightfox (Carbonfox)', colorscheme = 'carbonfox', before = [[ require('nightfox').setup { options = { transparent = true } } ]] },
+          { name = 'Nightfox (Nordfox opaque)', colorscheme = 'nordfox', before = [[ require('nightfox').setup { options = { transparent = false } } ]] },
+          { name = 'Tokyonight (Storm)', colorscheme = 'tokyonight', before = [[ require('tokyonight').setup { style = 'storm', transparent = true } ]] },
+          { name = 'Catppuccin (Macchiato)', colorscheme = 'catppuccin', before = [[ require('catppuccin').setup { flavour = 'macchiato', transparent_background = true } ]] },
+          { name = 'Catppuccin (Macchiato opaque)', colorscheme = 'catppuccin', before = [[ require('catppuccin').setup { flavour = 'macchiato', transparent_background = false } ]] },
+          { name = 'Onedark (Darker)', colorscheme = 'onedark', before = [[ require('onedark').setup { style = 'darker', transparent = true } ]] },
+          { name = 'Kanagawa (Dragon)', colorscheme = 'kanagawa', before = [[ require('kanagawa').setup { theme = 'dragon', transparent = true } ]] },
+          { name = 'Kanagawa (Wave)', colorscheme = 'kanagawa', before = [[ require('kanagawa').setup { theme = 'wave', transparent = false } ]] },
+          { name = 'Monokai Pro', colorscheme = 'monokai-pro', before = [[ require('monokai-pro').setup { transparent_background = true } ]] },
+          { name = 'Rose Pine (Moon)', colorscheme = 'rose-pine', before = [[ require('rose-pine').setup { variant = 'moon' } ]] },
+          { name = 'Embark', colorscheme = 'embark' },
+          { name = 'Seoul256', colorscheme = 'seoul256', before = [[ vim.g.seoul256_background = 239 ]] },
+          { name = 'Solarized Osaka', colorscheme = 'solarized-osaka' },
+        },
+        livePreview = true,
+      }
       vim.cmd.colorscheme 'embark'
     end,
   },
 
-  -- {
-  --   'loctvl842/monokai-pro.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('monokai-pro').setup {
-  --       transparent_background = true,
-  --     }
-  --     vim.cmd.colorscheme 'monokai-pro'
-  --   end,
-  -- },
-
-  -- {
-  --   'junegunn/seoul256.vim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     vim.g.seoul256_background = 239
-  --     vim.cmd.colorscheme 'seoul256'
-  --   end,
-  -- },
-
-  -- {
-  --   'catppuccin/nvim',
-  --   name = 'catppuccin',
-  --   priority = 1000,
-  --   config = function()
-  --     require('catppuccin').setup {
-  --       flavour = 'macchiato',
-  --       transparent_background = false,
-  --     }
-  --     vim.cmd.colorscheme 'catppuccin'
-  --   end,
-  -- },
-
-  -- {
-  --   'craftzdog/solarized-osaka.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {},
-  --   config = function()
-  --     vim.cmd.colorscheme 'solarized-osaka'
-  --   end,
-  -- },
-
-  -- {
-  --   'EdenEast/nightfox.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('nightfox').setup({
-  --       options = {
-  --         transparent = false,
-  --       },
-  --     })
-  --     vim.cmd.colorscheme 'nordfox'
-  --   end,
-  -- },
-
-  -- {
-  --   'rebelot/kanagawa.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('kanagawa').setup({
-  --       compile = true,
-  --       theme = 'wave',
-  --       transparent = false,
-  --     })
-  --     vim.cmd.colorscheme 'kanagawa'
-  --   end,
-  -- },
-
-  -- {
-  --   'rose-pine/neovim',
-  --   name = 'rose-pine',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require('rose-pine').setup {
-  --       variant = 'moon',
-  --     }
-  --     vim.cmd.colorscheme 'rose-pine'
-  --   end,
-  -- },
+  { 'scottmckendry/cyberdream.nvim' },
+  { 'EdenEast/nightfox.nvim' },
+  { 'navarasu/onedark.nvim' },
+  { 'rebelot/kanagawa.nvim' },
+  { 'catppuccin/nvim', name = 'catppuccin' },
+  { 'folke/tokyonight.nvim' },
+  { 'loctvl842/monokai-pro.nvim' },
+  { 'rose-pine/neovim', name = 'rose-pine' },
+  { 'embark-theme/vim', name = 'embark' },
+  { 'junegunn/seoul256.vim' },
+  { 'craftzdog/solarized-osaka.nvim' },
 
   {
     'carlos-algms/agentic.nvim',
