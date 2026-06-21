@@ -385,6 +385,7 @@ return {
           { name = 'Ayu Mirage', colorscheme = 'ayu-mirage', before = [[ require('ayu').setup { mirage = true, overrides = { Normal = { bg = "None" }, NormalFloat = { bg = "none" }, SignColumn = { bg = "None" } } } ]] },
           { name = 'Ayu Light', colorscheme = 'ayu-light', before = [[ require('ayu').setup { overrides = { Normal = { bg = "None" }, NormalFloat = { bg = "none" }, SignColumn = { bg = "None" } } } ]] },
           { name = 'One Monokai', colorscheme = 'one_monokai', before = [[ require('one_monokai').setup { transparent = true } ]] },
+          { name = 'Monokai Nightasty', colorscheme = 'monokai-nightasty', before = [[ require('monokai-nightasty').setup { dark_style_background = 'transparent' } ]] },
         },
         livePreview = true,
       }
@@ -406,6 +407,7 @@ return {
   { 'T-b-t-nchos/Aquavium.nvim' },
   { 'Shatur/neovim-ayu' },
   { 'cpea2506/one_monokai.nvim' },
+  { 'polirritmico/monokai-nightasty.nvim' },
 
   {
     'carlos-algms/agentic.nvim',
