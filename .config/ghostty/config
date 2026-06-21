@@ -13,7 +13,7 @@ window-decoration = none
 macos-non-native-fullscreen = true
 
 # Theme
-theme = gruvbox-dark
+theme = Catppuccin Mocha
 
 # Cursor
 cursor-style = block
