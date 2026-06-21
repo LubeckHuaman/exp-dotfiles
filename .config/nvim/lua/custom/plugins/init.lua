@@ -512,31 +512,31 @@ return {
   --   end,
   -- },
 
-  -- {
-  --   'folke/tokyonight.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {},
-  --   config = function()
-  --     require('tokyonight').setup {
-  --       style = 'storm',
-  --       transparent = true,
-  --     }
-  --     vim.cmd.colorscheme 'tokyonight'
-  --   end,
-  -- },
-
   {
-    'loctvl842/monokai-pro.nvim',
+    'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
+    opts = {},
     config = function()
-      require('monokai-pro').setup {
-        transparent_background = true,
+      require('tokyonight').setup {
+        style = 'storm',
+        transparent = true,
       }
-      vim.cmd.colorscheme 'monokai-pro'
+      vim.cmd.colorscheme 'tokyonight'
     end,
   },
+
+  -- {
+  --   'loctvl842/monokai-pro.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('monokai-pro').setup {
+  --       transparent_background = true,
+  --     }
+  --     vim.cmd.colorscheme 'monokai-pro'
+  --   end,
+  -- },
 
   -- {
   --   'junegunn/seoul256.vim',
