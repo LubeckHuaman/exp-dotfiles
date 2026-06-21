@@ -434,31 +434,31 @@ return {
   --   end,
   -- },
 
-  {
-    'rebelot/kanagawa.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require('kanagawa').setup {
-        theme = 'dragon',
-        transparent = true,
-      }
-      vim.cmd.colorscheme 'kanagawa'
-    end,
-  },
-
   -- {
-  --   'rose-pine/neovim',
-  --   name = 'rose-pine',
+  --   'rebelot/kanagawa.nvim',
   --   lazy = false,
   --   priority = 1000,
   --   config = function()
-  --     require('rose-pine').setup {
-  --       variant = 'moon',
+  --     require('kanagawa').setup {
+  --       theme = 'dragon',
+  --       transparent = true,
   --     }
-  --     vim.cmd.colorscheme 'rose-pine'
+  --     vim.cmd.colorscheme 'kanagawa'
   --   end,
   -- },
+
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    config = function()
+      require('catppuccin').setup {
+        flavour = 'macchiato',
+        transparent_background = true,
+      }
+      vim.cmd.colorscheme 'catppuccin'
+    end,
+  },
 
   -- {
   --   'sainnhe/everforest',
