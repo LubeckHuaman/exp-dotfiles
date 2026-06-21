@@ -408,6 +408,8 @@ return {
           { name = 'Koda Light', colorscheme = 'koda-light', before = [[ require('koda').setup { transparent = false } ]] },
           { name = 'Koda Moss', colorscheme = 'koda-moss', before = [[ require('koda').setup { transparent = true } ]] },
           { name = 'Koda Glade', colorscheme = 'koda-glade', before = [[ require('koda').setup { transparent = false } ]] },
+          { name = 'Zenburn', colorscheme = 'zenburn', before = [[ vim.o.background = 'dark' ]] },
+          { name = 'Zenburn Light', colorscheme = 'zenburn', before = [[ vim.o.background = 'light' ]] },
         },
         livePreview = true,
       }
@@ -435,6 +437,7 @@ return {
   { 'ellisonleao/gruvbox.nvim' },
   { 'dracula/vim' },
   { 'oskarnurm/koda.nvim' },
+  { 'jnurmine/Zenburn' },
 
   {
     'carlos-algms/agentic.nvim',
