@@ -443,17 +443,18 @@ return {
   --   end,
   -- },
 
-  -- {
-  --   'ellisonleao/gruvbox.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     require('gruvbox').setup {
-  --       contrast = 'hard',
-  --       terminal_colors = true,
-  --     }
-  --     vim.cmd.colorscheme 'gruvbox'
-  --   end,
-  -- },
+  {
+    'ellisonleao/gruvbox.nvim',
+    priority = 1000,
+    config = function()
+      require('gruvbox').setup {
+        contrast = 'hard',
+        terminal_colors = true,
+        transparent_mode = true,
+      }
+      vim.cmd.colorscheme 'gruvbox'
+    end,
+  },
 
   -- {
   --   'rose-pine/neovim',
@@ -492,18 +493,18 @@ return {
   --   end,
   -- },
 
-  {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
-    config = function()
-      require('catppuccin').setup {
-        flavour = 'macchiato',
-        transparent_background = false,
-      }
-      vim.cmd.colorscheme 'catppuccin'
-    end,
-  },
+  -- {
+  --   'catppuccin/nvim',
+  --   name = 'catppuccin',
+  --   priority = 1000,
+  --   config = function()
+  --     require('catppuccin').setup {
+  --       flavour = 'macchiato',
+  --       transparent_background = false,
+  --     }
+  --     vim.cmd.colorscheme 'catppuccin'
+  --   end,
+  -- },
 
   -- {
   --   'craftzdog/solarized-osaka.nvim',
@@ -540,18 +541,6 @@ return {
   --       transparent = false,
   --     })
   --     vim.cmd.colorscheme 'kanagawa'
-  --   end,
-  -- },
-
-  -- {
-  --   'ellisonleao/gruvbox.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     require('gruvbox').setup {
-  --       contrast = 'hard',
-  --       terminal_colors = true,
-  --     }
-  --     vim.cmd.colorscheme 'gruvbox'
   --   end,
   -- },
 
