@@ -454,13 +454,26 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'oskarnurm/koda.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('koda').setup { transparent = true }
+  --     vim.cmd.colorscheme 'koda-glade'
+  --   end,
+  -- },
+
   {
-    'oskarnurm/koda.nvim',
-    lazy = false,
+    'olimorris/onedarkpro.nvim',
     priority = 1000,
     config = function()
-      require('koda').setup { transparent = true }
-      vim.cmd.colorscheme 'koda-glade'
+      require('onedarkpro').setup {
+        options = {
+          transparency = true,
+        },
+      }
+      vim.cmd.colorscheme 'onedark'
     end,
   },
 
