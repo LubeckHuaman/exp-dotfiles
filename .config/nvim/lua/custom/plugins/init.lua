@@ -370,6 +370,7 @@ return {
           { name = 'Tokyonight (Storm)', colorscheme = 'tokyonight', before = [[ require('tokyonight').setup { style = 'storm', transparent = true } ]] },
           { name = 'Catppuccin (Macchiato)', colorscheme = 'catppuccin', before = [[ require('catppuccin').setup { flavour = 'macchiato', transparent_background = true } ]] },
           { name = 'Catppuccin (Macchiato opaque)', colorscheme = 'catppuccin', before = [[ require('catppuccin').setup { flavour = 'macchiato', transparent_background = false } ]] },
+          { name = 'Catppuccin (Latte)', colorscheme = 'catppuccin', before = [[ require('catppuccin').setup { flavour = 'latte', transparent_background = false } ]] },
           { name = 'Onedark (Darker)', colorscheme = 'onedark', before = [[ require('onedark').setup { style = 'darker', transparent = true } ]] },
           { name = 'Kanagawa (Dragon)', colorscheme = 'kanagawa', before = [[ require('kanagawa').setup { theme = 'dragon', transparent = true } ]] },
           { name = 'Kanagawa (Wave)', colorscheme = 'kanagawa', before = [[ require('kanagawa').setup { theme = 'wave', transparent = false } ]] },
