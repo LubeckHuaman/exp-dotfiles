@@ -421,16 +421,29 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'navarasu/onedark.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('onedark').setup {
+  --       style = 'darker',
+  --       transparent = true,
+  --     }
+  --     vim.cmd.colorscheme 'onedark'
+  --   end,
+  -- },
+
   {
-    'navarasu/onedark.nvim',
+    'rebelot/kanagawa.nvim',
     lazy = false,
     priority = 1000,
     config = function()
-      require('onedark').setup {
-        style = 'darker',
+      require('kanagawa').setup {
+        theme = 'dragon',
         transparent = true,
       }
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'kanagawa'
     end,
   },
 
