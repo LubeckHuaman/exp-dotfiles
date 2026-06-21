@@ -499,16 +499,30 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'navarasu/onedark.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('onedark').setup {
+  --       style = 'darker',
+  --       transparent = true,
+  --     }
+  --     vim.cmd.colorscheme 'onedark'
+  --   end,
+  -- },
+
   {
-    'navarasu/onedark.nvim',
+    'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
+    opts = {},
     config = function()
-      require('onedark').setup {
-        style = 'darker',
+      require('tokyonight').setup {
+        style = 'storm',
         transparent = true,
       }
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'tokyonight'
     end,
   },
 
