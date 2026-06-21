@@ -381,6 +381,10 @@ return {
           { name = 'Bluloco Dark', colorscheme = 'bluloco-dark', before = [[ require('bluloco').setup { style = 'dark', transparent = true } ]] },
           { name = 'Bluloco Light', colorscheme = 'bluloco-light', before = [[ require('bluloco').setup { style = 'light', transparent = true } ]] },
           { name = 'Aquavium', colorscheme = 'Aquavium', before = [[ require('Aquavium').setup { transparent = true } ]] },
+          { name = 'Ayu Dark', colorscheme = 'ayu-dark', before = [[ require('ayu').setup { overrides = { Normal = { bg = "None" }, NormalFloat = { bg = "none" }, SignColumn = { bg = "None" } } } ]] },
+          { name = 'Ayu Mirage', colorscheme = 'ayu-mirage', before = [[ require('ayu').setup { mirage = true, overrides = { Normal = { bg = "None" }, NormalFloat = { bg = "none" }, SignColumn = { bg = "None" } } } ]] },
+          { name = 'Ayu Light', colorscheme = 'ayu-light', before = [[ require('ayu').setup { overrides = { Normal = { bg = "None" }, NormalFloat = { bg = "none" }, SignColumn = { bg = "None" } } } ]] },
+          { name = 'One Monokai', colorscheme = 'one_monokai', before = [[ require('one_monokai').setup { transparent = true } ]] },
         },
         livePreview = true,
       }
@@ -400,6 +404,8 @@ return {
   { 'craftzdog/solarized-osaka.nvim' },
   { 'uloco/bluloco.nvim', dependencies = { 'rktjmp/lush.nvim' } },
   { 'T-b-t-nchos/Aquavium.nvim' },
+  { 'Shatur/neovim-ayu' },
+  { 'cpea2506/one_monokai.nvim' },
 
   {
     'carlos-algms/agentic.nvim',
