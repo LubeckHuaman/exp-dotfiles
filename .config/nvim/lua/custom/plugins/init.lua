@@ -460,17 +460,42 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'EdenEast/nightfox.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('nightfox').setup({
+  --       options = {
+  --         transparent = true,
+  --       },
+  --     })
+  --     vim.cmd.colorscheme 'carbonfox'
+  --   end,
+  -- },
+
   {
-    'EdenEast/nightfox.nvim',
+    'scottmckendry/cyberdream.nvim',
     lazy = false,
     priority = 1000,
     config = function()
-      require('nightfox').setup({
-        options = {
-          transparent = true,
+      require('cyberdream').setup {
+        transparent = true,
+        italic_comments = true,
+        hide_fillchars = false,
+        borderless_telescope = true,
+        terminal_colors = true,
+        cache = false,
+        variant = 'highcontrast',
+        highlights = {},
+        colors = {},
+        extensions = {
+          telescope = true,
+          notify = true,
+          mini = true,
         },
-      })
-      vim.cmd.colorscheme 'carbonfox'
+      }
+      vim.cmd 'colorscheme cyberdream'
     end,
   },
 
