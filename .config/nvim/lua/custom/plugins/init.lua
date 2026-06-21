@@ -512,17 +512,29 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   'folke/tokyonight.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     require('tokyonight').setup {
+  --       style = 'storm',
+  --       transparent = true,
+  --     }
+  --     vim.cmd.colorscheme 'tokyonight'
+  --   end,
+  -- },
+
   {
-    'folke/tokyonight.nvim',
+    'loctvl842/monokai-pro.nvim',
     lazy = false,
     priority = 1000,
-    opts = {},
     config = function()
-      require('tokyonight').setup {
-        style = 'storm',
-        transparent = true,
+      require('monokai-pro').setup {
+        transparent_background = true,
       }
-      vim.cmd.colorscheme 'tokyonight'
+      vim.cmd.colorscheme 'monokai-pro'
     end,
   },
 
