@@ -360,7 +360,9 @@ return {
     },
     opts = {
       keymap = {
-        preset = 'enter',
+        ['<C-n>'] = { 'select_next', 'fallback' },
+        ['<C-p>'] = { 'select_prev', 'fallback' },
+        ['<CR>'] = { 'select_and_accept', 'fallback' },
       },
       appearance = {
         nerd_font_variant = 'mono',
