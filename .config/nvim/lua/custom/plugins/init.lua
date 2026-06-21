@@ -378,6 +378,8 @@ return {
           { name = 'Embark', colorscheme = 'embark' },
           { name = 'Seoul256', colorscheme = 'seoul256', before = [[ vim.g.seoul256_background = 239 ]] },
           { name = 'Solarized Osaka', colorscheme = 'solarized-osaka' },
+          { name = 'Bluloco Dark', colorscheme = 'bluloco-dark', before = [[ require('bluloco').setup { style = 'dark', transparent = true } ]] },
+          { name = 'Bluloco Light', colorscheme = 'bluloco-light', before = [[ require('bluloco').setup { style = 'light', transparent = true } ]] },
         },
         livePreview = true,
       }
@@ -396,6 +398,7 @@ return {
   { 'embark-theme/vim', name = 'embark' },
   { 'junegunn/seoul256.vim' },
   { 'craftzdog/solarized-osaka.nvim' },
+  { 'uloco/bluloco.nvim', dependencies = { 'rktjmp/lush.nvim' } },
 
   {
     'carlos-algms/agentic.nvim',
