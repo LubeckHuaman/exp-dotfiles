@@ -27,12 +27,18 @@ link_config "ghostty/config"
 link_config "tmux/tmux.conf"
 link_config "kitty/kitty.conf"
 link_config "alacritty/alacritty.toml"
+link_config "rectangle/config.json"
 
 echo ""
 echo "=== Tmux plugins ==="
+TPM_DIR="$HOME/.config/tmux/plugins/tpm"
+if [ ! -d "$TPM_DIR" ]; then
+    echo "  📦 Clonando TPM..."
+    git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
+fi
 tmux start-server
 tmux set-environment -g TMUX_PLUGIN_MANAGER_PATH "$HOME/.config/tmux/plugins/"
-bash ~/.config/tmux/plugins/tpm/bin/install_plugins
+bash "$TPM_DIR/bin/install_plugins"
 
 echo ""
 echo "=== Done ==="
