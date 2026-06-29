@@ -30,6 +30,20 @@ link_config "alacritty/alacritty.toml"
 link_config "rectangle/config.json"
 
 echo ""
+echo "=== Legacy links ==="
+if [ -L "$HOME/.tmux.conf" ]; then
+    echo "  ✅ ~/.tmux.conf (already linked)"
+elif [ -e "$HOME/.tmux.conf" ]; then
+    mv "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak"
+    echo "  📦 ~/.tmux.conf → ~/.tmux.conf.bak"
+    ln -s "$REPO_DIR/.config/tmux/tmux.conf" "$HOME/.tmux.conf"
+    echo "  🔗 ~/.tmux.conf → $REPO_DIR/.config/tmux/tmux.conf"
+else
+    ln -s "$REPO_DIR/.config/tmux/tmux.conf" "$HOME/.tmux.conf"
+    echo "  🔗 ~/.tmux.conf → $REPO_DIR/.config/tmux/tmux.conf"
+fi
+
+echo ""
 echo "=== Tmux plugins ==="
 TPM_DIR="$HOME/.config/tmux/plugins/tpm"
 if [ ! -d "$TPM_DIR" ]; then
