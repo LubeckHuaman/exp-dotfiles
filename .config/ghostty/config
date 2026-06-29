@@ -49,3 +49,6 @@ keybind = super+d=text:\x01|
 keybind = super+shift+d=text:\x01"
 keybind = super+left=text:\x1b\x1b[D
 keybind = super+right=text:\x1b\x1b[C
+
+# Toggle opacity
+keybind = ctrl+shift+o=toggle_background_opacity
