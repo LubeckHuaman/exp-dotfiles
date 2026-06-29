@@ -68,3 +68,26 @@ vim.api.nvim_create_autocmd('BufEnter', {
     vim.cmd('checktime')
   end,
 })
+
+-- Transparency toggle
+local bg_saved = {}
+local groups = { 'Normal', 'NormalFloat', 'SignColumn', 'FoldColumn' }
+vim.api.nvim_create_user_command('TransparencyToggle', function()
+  if vim.g.transparent_enabled then
+    for _, g in ipairs(groups) do
+      local saved = bg_saved[g] or {}
+      pcall(vim.api.nvim_set_hl, 0, g, { bg = saved.bg, ctermbg = saved.ctermbg })
+    end
+    vim.g.transparent_enabled = false
+  else
+    for _, g in ipairs(groups) do
+      local ok, info = pcall(vim.api.nvim_get_hl, 0, { id = g })
+      if ok then
+        bg_saved[g] = { bg = info.bg, ctermbg = info.ctermbg }
+      end
+      pcall(vim.api.nvim_set_hl, 0, g, { bg = 'NONE', ctermbg = 'NONE' })
+    end
+    vim.g.transparent_enabled = true
+  end
+end, {})
+vim.keymap.set('n', '<leader>tt', '<cmd>TransparencyToggle<CR>', { desc = 'Toggle transparency' })
