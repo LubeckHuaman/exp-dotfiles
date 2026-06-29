@@ -43,7 +43,8 @@ scrollback-limit = 10000
 custom-shader = /Users/speedmaster/Concepts/exp-dotfiles/.config/ghostty/blackhole/blackhole.glsl
 custom-shader-animation = true
 
-# Keybindings - tmux tab navigation (same as Kitty/Alacritty)
+# Keybindings - tmux (same as Kitty/Alacritty)
 keybind = super+t=text:\x1bt
+keybind = super+d=text:\x01|
 keybind = super+left=text:\x1b\x1b[D
 keybind = super+right=text:\x1b\x1b[C
