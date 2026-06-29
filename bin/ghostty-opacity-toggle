@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CONFIG="$HOME/.config/ghostty/config"
+
+if [ ! -f "$CONFIG" ]; then
+  echo "Config not found: $CONFIG"
+  exit 1
+fi
+
+CURRENT=$(grep '^background-opacity' "$CONFIG" | sed 's/.*= *//')
+
+if [ "$CURRENT" = "0.96" ]; then
+  NEW="1.0"
+else
+  NEW="0.96"
+fi
+
+sed -i '' "s/^background-opacity = .*/background-opacity = $NEW/" "$CONFIG"
+echo "background-opacity → $NEW"
+
+pkill -SIGUSR2 ghostty 2>/dev/null && echo "Ghostty reloaded" || echo "Could not signal Ghostty (try manual reload: ctrl+shift+,)"
