@@ -12,7 +12,6 @@ background-blur = 20
 # Window
 window-decoration = none
 macos-non-native-fullscreen = true
-quick-terminal-corner-radius = 40
 
 # Colors from Alacritty (Gruvbox custom)
 background = #30302c
