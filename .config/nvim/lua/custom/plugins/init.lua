@@ -431,6 +431,35 @@ return {
     end,
   },
 
+  {
+    -- Transparency toggle
+    config = function()
+      local bg_saved = {}
+      vim.api.nvim_create_user_command('TransparencyToggle', function()
+        local hl = vim.api.nvim_get_hl
+        local set = vim.api.nvim_set_hl
+        local groups = { 'Normal', 'NormalFloat', 'SignColumn', 'FoldColumn' }
+        if vim.g.transparent_enabled then
+          for _, g in ipairs(groups) do
+            local saved = bg_saved[g] or {}
+            set(0, g, { bg = saved.bg, ctermbg = saved.ctermbg })
+          end
+          vim.o.background = vim.g._saved_bg or 'dark'
+          vim.g.transparent_enabled = false
+        else
+          vim.g._saved_bg = vim.o.background
+          for _, g in ipairs(groups) do
+            local info = hl(0, { id = g })
+            bg_saved[g] = { bg = info.bg, ctermbg = info.ctermbg }
+            set(0, g, { bg = 'NONE', ctermbg = 'NONE' })
+          end
+          vim.g.transparent_enabled = true
+        end
+      end, {})
+      vim.keymap.set('n', '<leader>tt', '<cmd>TransparencyToggle<CR>', { desc = 'Toggle transparency' })
+    end,
+  },
+
   { 'scottmckendry/cyberdream.nvim' },
   { 'EdenEast/nightfox.nvim' },
   { 'navarasu/onedark.nvim' },
@@ -455,16 +484,6 @@ return {
   { 'jnurmine/Zenburn' },
   { 'sainnhe/gruvbox-material' },
   { 'olimorris/onedarkpro.nvim', priority = 1000 },
-  {
-    'xiyaowong/transparent.nvim',
-    cmd = 'TransparentToggle',
-    opts = {
-      extra_groups = { 'NormalFloat', 'NvimTreeNormal' },
-    },
-    keys = {
-      { '<leader>tt', '<cmd>TransparentToggle<CR>', desc = '[T]oggle [T]ransparency' },
-    },
-  },
 
   {
     'carlos-algms/agentic.nvim',
