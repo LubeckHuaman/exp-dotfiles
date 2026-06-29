@@ -420,6 +420,11 @@ return {
           { name = 'Gruvbox Material Soft Light', colorscheme = 'gruvbox-material', before = [[ vim.o.background = 'light'; vim.g.gruvbox_material_background = 'soft'; vim.g.gruvbox_material_palette = 'material'; vim.g.gruvbox_material_transparent_background = 0 ]] },
           { name = 'Gruvbox Material Mix Light', colorscheme = 'gruvbox-material', before = [[ vim.o.background = 'light'; vim.g.gruvbox_material_background = 'medium'; vim.g.gruvbox_material_palette = 'mix'; vim.g.gruvbox_material_transparent_background = 0 ]] },
           { name = 'Gruvbox Material Original Light', colorscheme = 'gruvbox-material', before = [[ vim.o.background = 'light'; vim.g.gruvbox_material_background = 'medium'; vim.g.gruvbox_material_palette = 'original'; vim.g.gruvbox_material_transparent_background = 0 ]] },
+          { name = 'Onedarkpro (Default)', colorscheme = 'onedark', before = [[ require('onedarkpro').setup { options = { transparency = true } } ]] },
+          { name = 'Onedarkpro (Vivid)', colorscheme = 'onedark_vivid', before = [[ require('onedarkpro').setup { options = { transparency = true } } ]] },
+          { name = 'Onedarkpro (Dark)', colorscheme = 'onedark_dark', before = [[ require('onedarkpro').setup { options = { transparency = true } } ]] },
+          { name = 'Onedarkpro (Vaporwave)', colorscheme = 'vaporwave', before = [[ require('onedarkpro').setup { options = { transparency = true } } ]] },
+          { name = 'Onedarkpro (Light)', colorscheme = 'onelight', before = [[ require('onedarkpro').setup { options = { transparency = false } } ]] },
         },
         livePreview = true,
       }
@@ -449,6 +454,7 @@ return {
   { 'oskarnurm/koda.nvim' },
   { 'jnurmine/Zenburn' },
   { 'sainnhe/gruvbox-material' },
+  { 'olimorris/onedarkpro.nvim', priority = 1000 },
 
   {
     'carlos-algms/agentic.nvim',
