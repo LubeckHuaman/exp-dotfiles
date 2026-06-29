@@ -457,6 +457,7 @@ return {
   { 'olimorris/onedarkpro.nvim', priority = 1000 },
   {
     'xiyaowong/transparent.nvim',
+    cmd = 'TransparentToggle',
     opts = {
       extra_groups = { 'NormalFloat', 'NvimTreeNormal' },
     },
