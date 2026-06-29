@@ -46,5 +46,6 @@ custom-shader-animation = true
 # Keybindings - tmux (same as Kitty/Alacritty)
 keybind = super+t=text:\x1bt
 keybind = super+d=text:\x01|
+keybind = super+shift+d=text:\x01"
 keybind = super+left=text:\x1b\x1b[D
 keybind = super+right=text:\x1b\x1b[C
