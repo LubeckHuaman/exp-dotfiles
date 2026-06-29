@@ -455,6 +455,15 @@ return {
   { 'jnurmine/Zenburn' },
   { 'sainnhe/gruvbox-material' },
   { 'olimorris/onedarkpro.nvim', priority = 1000 },
+  {
+    'xiyaowong/transparent.nvim',
+    opts = {
+      extra_groups = { 'NormalFloat', 'NvimTreeNormal' },
+    },
+    keys = {
+      { '<leader>tt', '<cmd>TransparentToggle<CR>', desc = '[T]oggle [T]ransparency' },
+    },
+  },
 
   {
     'carlos-algms/agentic.nvim',
