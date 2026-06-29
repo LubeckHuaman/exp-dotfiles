@@ -44,6 +44,23 @@ else
 fi
 
 echo ""
+echo "=== Scripts ==="
+LOCAL_BIN="$HOME/.local/bin"
+mkdir -p "$LOCAL_BIN"
+for script in "$REPO_DIR/bin/"*; do
+    name="$(basename "$script")"
+    dest="$LOCAL_BIN/$name"
+    if [ -L "$dest" ]; then
+        echo "  ✅ $dest (already linked)"
+    elif [ -e "$dest" ]; then
+        echo "  ⚠️  $dest exists, skipping"
+    else
+        ln -s "$script" "$dest"
+        echo "  🔗 $dest → $script"
+    fi
+done
+
+echo ""
 echo "=== Tmux plugins ==="
 TPM_DIR="$HOME/.config/tmux/plugins/tpm"
 if [ ! -d "$TPM_DIR" ]; then
