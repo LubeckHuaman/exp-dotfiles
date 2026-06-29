@@ -6,7 +6,7 @@ font-size = 13
 font-thicken = true
 
 # Transparency
-background-opacity = 0.93
+background-opacity = 0.96
 background-blur = 20
 
 # Window
