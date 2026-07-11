@@ -35,6 +35,8 @@ palette = 15=#e8e8d3
 
 # Cursor
 cursor-style = block
+cursor-color = cell-foreground
+cursor-text = cell-background
 
 # Scrollback
 scrollback-limit = 10000
