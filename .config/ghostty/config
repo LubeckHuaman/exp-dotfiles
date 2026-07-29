@@ -6,8 +6,8 @@ font-size = 13
 font-thicken = true
 
 # Transparency
-background-opacity = 0.96
-background-blur = 20
+# background-opacity = 0.96
+# background-blur = 20
 
 # Window
 window-decoration = none

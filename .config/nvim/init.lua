@@ -38,9 +38,3 @@ require('lazy').setup('custom.plugins', {
   },
 })
 
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'go', 'lua', 'python', 'bash', 'c', 'cpp', 'vim' },
-  callback = function(args)
-    pcall(vim.treesitter.start, args.buf)
-  end,
-})

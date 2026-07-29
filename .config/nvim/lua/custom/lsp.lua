@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
     map('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
     map('K', vim.lsp.buf.hover, 'Hover Documentation')
-    map('<C-k>', vim.lsp.buf.signature_help, 'Signature Help')
+    map('<C-k>', vim.lsp.buf.signature_help, 'Signature Help', 'i')
     map('<leader>cA', vim.lsp.buf.code_action, '[C]ode [A]ction', { 'n', 'x' })
     map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
 
@@ -81,11 +81,24 @@ vim.diagnostic.config {
   },
 }
 
-local capabilities = require('blink.cmp').get_lsp_capabilities()
+local capabilities = vim.tbl_deep_extend(
+  'force',
+  vim.lsp.protocol.make_client_capabilities(),
+  require('blink.cmp').get_lsp_capabilities()
+)
+capabilities.textDocument.semanticTokens.dynamicRegistration = false
 
 local servers = {
-  clangd = {},
-  gopls = {},
+  clangd = {
+    cmd = { 'clangd', '--enable-semantic-highlighting' },
+  },
+  gopls = {
+    settings = {
+      gopls = {
+        ui = { semanticTokens = true },
+      },
+    },
+  },
   pyright = {},
   ts_ls = {},
   lua_ls = {
@@ -94,6 +107,7 @@ local servers = {
         completion = {
           callSnippet = 'Replace',
         },
+        semantic = { enable = true },
       },
     },
   },
