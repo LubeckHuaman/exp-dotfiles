@@ -29,6 +29,11 @@ link_config "kitty/kitty.conf"
 link_config "alacritty/alacritty.toml"
 link_config "rectangle/config.json"
 
+echo "=== Doom Emacs ==="
+link_config "doom/init.el"
+link_config "doom/config.el"
+link_config "doom/packages.el"
+
 echo ""
 echo "=== Legacy links ==="
 if [ -L "$HOME/.tmux.conf" ]; then
