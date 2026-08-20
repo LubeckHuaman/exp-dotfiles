@@ -51,3 +51,6 @@
 ;; (unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
+
+(package! leetcode
+  :recipe (:host github :repo "kaiwk/leetcode.el" :files ("*.el")))
