@@ -63,7 +63,10 @@
   (setq leetcode-prefer-language "python3"
         leetcode-prefer-sql "mysql"
         leetcode-save-solutions t
-        leetcode-directory "~/leetcode"))
+        leetcode-directory "~/leetcode")
+  (after! evil
+    (evil-define-key 'normal leetcode--problems-mode-map
+      (kbd "l") #'leetcode--load-more-button-fn)))
 
 (defun +opencode/vterm-open ()
   "Open OpenCode in vterm in a new split, with auto-revert on the current file."
