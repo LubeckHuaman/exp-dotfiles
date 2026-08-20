@@ -56,18 +56,6 @@
       (:prefix ("o o" . "opencode")
        :desc "Open OpenCode in vterm" "o" #'+opencode/vterm-open))
 
-;; LeetCode (kaiwk/leetcode.el)
-(use-package! leetcode
-  :defer t
-  :config
-  (setq leetcode-prefer-language "python3"
-        leetcode-prefer-sql "mysql"
-        leetcode-save-solutions t
-        leetcode-directory "~/leetcode")
-  (after! evil
-    (evil-define-key 'normal leetcode--problems-mode-map
-      (kbd "l") #'leetcode--load-more-button-fn)))
-
 (defun +opencode/vterm-open ()
   "Open OpenCode in vterm in a new split, with auto-revert on the current file."
   (interactive)
